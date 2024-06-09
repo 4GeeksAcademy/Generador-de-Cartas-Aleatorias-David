@@ -3,27 +3,47 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello Rigo with Vanilla.js</title>
+    <title>Random-Card</title>
+    <script
+      src="https://kit.fontawesome.com/f73396c11b.js"
+      crossorigin="anonymous"
+    ></script>
     <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
-      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
     <link rel="shortcut icon" href="./4geeks.ico" />
+    <link rel="styles" href="/src/style.css" />
   </head>
-  <body>
-    <div class="container-fluid text-center">
-      <h1 class="mt-5">Hello Rigo!</h1>
-      <img src="./rigo-baby.jpg" />
-      <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
-      </p>
-      <div class="fixed-bottom p-4">
-        Made with ❤️ by
-        <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
+  <body class="bg-success">
+    <div
+      class="container-fluid  card mb-3 mt-5 mb-5 rounded-4 shadow p-3 mb-5 bg-body-tertiary"
+      style="max-width: 15rem; height: 25rem;"
+    >
+      <div
+        class="bg-transparent palos text-left"
+        style="font-size: 70px;"
+      ></div>
+      <div class="card-body text-success position-relative">
+        <p
+          class="card-text text-center numeros position-absolute top-50 start-50 translate-middle text-dark"
+          style="font-size: 120px;"
+        ></p>
       </div>
+      <div
+        class="bg-transparent palos"
+        style="transform: rotate(180deg); font-size: 70px;"
+      ></div>
+      <button
+        type="button"
+        role="button"
+        class="btn-new btn position-absolute top-100 start-50 translate-middle mt-5 text-primary bg-black"
+        onclick="location.reload()"
+      >
+        Haz click
+      </button>
     </div>
   </body>
 </html>
