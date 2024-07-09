@@ -1,26 +1,27 @@
 /* eslint-disable */
 import "bootstrap";
 import "./style.css";
-
 import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
 window.onload = function() {
-  let palos = ["♥", "♠", "♦", "♣"];
-  let numeros = ["A", 2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K"];
+  const palos = ["♥", "♠", "♦", "♣"];
+  const numeros = ["A", 2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K"];
 
-  let randomPalos = Math.floor(Math.random() * palos.length);
-  let randomNumeros = Math.floor(Math.random() * numeros.length);
-  let elementPalos = document.getElementsByClassName("palos");
-  elementPalos[0].innerHTML = palos[randomPalos];
-  elementPalos[1].innerHTML = palos[randomPalos];
+  // Obtener un palo y un número aleatorio
+  const randomPalo = palos[Math.floor(Math.random() * palos.length)];
+  const randomNumero = numeros[Math.floor(Math.random() * numeros.length)];
 
-  if (palos[randomPalos] === "♥" || palos[randomPalos] === "♦") {
-    elementPalos[0].style.color = "red";
-    elementPalos[1].style.color = "red";
-  } else {
-    elementPalos[0];
-    elementPalos[1];
-  }
-  document.querySelector(".numeros").innerHTML = numeros[randomNumeros];
+  // Asignar los palos a los elementos correspondientes
+  const elementPalos = document.getElementsByClassName("palos");
+  elementPalos[0].innerHTML = randomPalo;
+  elementPalos[1].innerHTML = randomPalo;
+
+  // Cambiar el color del palo usando operador ternario
+  const color = (randomPalo === "♥" || randomPalo === "♦") ? "red" : "black";
+  elementPalos[0].style.color = color;
+  elementPalos[1].style.color = color;
+
+  // Asignar el número al elemento correspondiente
+  document.querySelector(".numeros").innerHTML = randomNumero;
 };
